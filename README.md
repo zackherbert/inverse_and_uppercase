@@ -2,13 +2,16 @@
 
 This is a small docker compose demo, made to test running containers with open ports interacting with each other.
 
+The purpose of this demo is also to find the current external ip by querying `https://ip.me`
+to verify that the containers are using the correct network configuration.
+
 It contains 3 containers running a python program:
 
- - inverse: open tcp port 4444 and will inverse all text received on that port.
- - uppercase: open tcp port 4445 and will return the uppercase of all text received on that port.
- - inverse_and_uppercase: open tcp port 4446 and will use the two other containers to inverse and uppercase.
+ - inverse: open tcp port ``4444`` and will inverse all text received on that port.
+ - uppercase: open tcp port ``4445`` and will return the uppercase of all text received on that port.
+ - inverse_and_uppercase: open tcp port ``4446`` and will use the two other containers to inverse and uppercase.
 
-Only the port 4446 is exposed on the host.
+Only the port ``4446`` is exposed on the host.
 
 Build with:
 
