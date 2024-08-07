@@ -35,8 +35,6 @@ def handle_client(conn):
 
 def main():
 
-    print_external_ip()
-
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind(('0.0.0.0', 4446))
         s.listen()
