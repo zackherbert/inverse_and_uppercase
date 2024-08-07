@@ -1,0 +1,19 @@
+services:
+  inverse:
+    build: ./inverse
+
+  uppercase:
+    build: ./uppercase
+
+  inverse_and_uppercase:
+    build: ./inverse_and_uppercase
+    ports:
+      - "4446:4446"
+    depends_on:
+      - inverse
+      - uppercase
+
+#networks:
+#  default:
+#    name: vpn0net
+#    external: true
